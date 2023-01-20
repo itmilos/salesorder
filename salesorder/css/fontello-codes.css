@@ -1,41 +1,61 @@
 
-.icon-emo-unhappy:before {
+.icon-down-dir:before {
+    content: '\e800';
+}
+
+/* '' */
+.icon-down-open:before {
+    content: '\e801';
+}
+
+/* '' */
+.icon-attach:before {
     content: '\e802';
 }
 
 /* '' */
-.icon-emo-sleep:before {
+.icon-link:before {
     content: '\e803';
 }
 
 /* '' */
-.icon-emo-thumbsup:before {
+.icon-help-circled:before {
     content: '\e804';
 }
 
 /* '' */
-.icon-emo-devil:before {
+.icon-megaphone:before {
     content: '\e805';
 }
 
 /* '' */
-.icon-emo-surprised:before {
+.icon-doc-new:before {
     content: '\e806';
 }
 
 /* '' */
-.icon-emo-tongue:before {
+.icon-search:before {
     content: '\e807';
 }
 
 /* '' */
-.icon-emo-coffee:before {
-    content: '\e808';
+.icon-filter:before {
+    content: '\f0b0';
 }
 
-/* '' */
-.icon-emo-sunglasses:before {
-    content: '\e809';
+/* '' */
+.icon-angle-down:before {
+    content: '\f107';
 }
 
-/* '' */
+/* '' */
+.icon-ellipsis-vert:before {
+    content: '\f142';
+}
+
+/* '' */
+.icon-doc-text-inv:before {
+    content: '\f15c';
+}
+
+/* '' */

@@ -1,288 +1,236 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <title>Title</title>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="styles.css" rel="stylesheet">
-    <link href="css/fontello/css/fontello.css" rel="stylesheet"/>
-    <script>
-        tailwind.config = {
-            theme: {
-                fontFamily: {
-                    'sans':  ['"Open Sans"'],
-                    'serif': ['"Open Sans"'],
-                    'mono': ['"Open Sans"'],
-                    'display': ['"Open Sans"'],
-                    'body': ['"Open Sans"'],
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet">
 </head>
-<body>
-<header class="flex justify-between p-3">
-    <nav class="flex text-slate-500 text-center text-xs">
-        <span class="mr-7 hover:underline">!</span>
-        <a class="mr-7 hover:underline underline-offset-8" href="#">Sales order<span class="ml-2">!</span></a>
-        <a class="mr-7 hover:underline underline-offset-8" href="#">Templates<span class="ml-2">!</span></a>
-        <a class="mr-7 hover:underline underline-offset-8" href="#">Reports<span class="ml-2">!</span></a>
-        <a class="mr-7 hover:underline underline-offset-8" href="#">Dictionary<span class="ml-2">!</span></a>
-    </nav>
-    <nav class="flex text-slate-500 text-center text-xs">
-        <a class="mr-7 hover:underline underline-offset-8" href="#">Support</a>
-        <a class="mr-7" href="#"><span>!</span></a>
-        <a href="#"><span>!</span></a>
-    </nav>
-</header>
-<div class="mx-auto px-2 md:px-20 pb-3 shadow-lg">
-    <div class="flex py-4">
-        <h1 class=" bold mr-5 text-xl md:text-3xl">Sales order</h1>
-        <span class="flex border border-slate-400 items-center mr-5 p-2 rounded-l-lg text-slate-400 bg-white text-sm ">
+
+<body class="bg-[#F6F7F9]">
+    <header class="flex justify-between p-3 bg-white">
+        <nav class="flex text-slate-500 text-center text-xs">
+            <span class="icon-doc-text-inv" />
+            <a class="mr-7 hover:underline underline-offset-8" href="#">Sales order<span
+                    class="icon-down-dir ml-2"></span></a>
+            <a class="mr-7 hover:underline underline-offset-8" href="#">Templates<span
+                    class="icon-down-dir ml-2"></span></a>
+            <a class="mr-7 hover:underline underline-offset-8" href="#">Reports<span
+                    class="icon-down-dir ml-2"></span></a>
+            <a class="mr-7 hover:underline underline-offset-8" href="#">Dictionary<span
+                    class="icon-down-dir ml-2"></span></a>
+        </nav>
+        <nav class="flex text-slate-500 text-center text-xs">
+            <a class="mr-7 hover:underline underline-offset-8" href="#">Support</a>
+            <a class="icon-help-circled mr-7" href="#"><span></span></a>
+            <a href="#"><span class="icon-megaphone"></span></a>
+        </nav>
+    </header>
+    <div class="main m-auto bg-[#F6F7F9] pb-3 shadow-lg ">
+        <div class="container max-w-[80%] m-auto">
+            <div class="flex py-4 ">
+                <h1 class=" bold mr-5 text-xl md:text-3xl">Sales order</h1>
+                <span
+                    class="flex border border-slate-400 items-center mr-5 p-2 rounded-l-full text-slate-400 bg-white text-sm ">
                     <span>Period: Last 3 months</span>
-                    <span class="ml-9">!</span>
+                    <span class="icon-angle-down  ml-9 "></span>
                 </span>
-        <span class="flex border border-slate-400 items-center mr-5 p-2 rounded-r-lg  justify-between text-slate-400 bg-white grow text-sm">
-                    <span>Search</span>
-                    <span class="ml-9">!</span>
-                </span>
-        <span class="flex items-center text-blue-400 flex-end text-sm">
-                    <span class="pr-3">!</span>
+                <form
+                    class="flex border border-slate-400 items-center mr-5  rounded-r-full  justify-between text-slate-400 bg-white grow text-sm">
+                    <!--            <span>Search</span>-->
+                    <!--            <span class="icon-search ml-9"></span>-->
+
+                    <div class="relative w-full rounded-r-full">
+                        <input
+                            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-full border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                            id="search-dropdown" placeholder="Search " required type="search">
+                        <button
+                            class="absolute top-0 right-0 p-2.5 text-sm font-medium text-gray-900  rounded-r-full   hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                            <span class="sr-only">Search</span>
+                        </button>
+                    </div>
+                </form>
+                <span class="flex items-center text-blue-400 flex-end text-sm">
+                    <span class="icon-doc-new pr-3"></span>
                     <a href="#">New sales order</a>
                 </span>
-    </div>
-    <div class="flex text-slate-400 justify-between text-sm items-center">
-        <div>
-            <button class="border rounded-full border-slate-400 px-4 mr-2">SO Status <span>!</span></button>
-            <button class="border rounded-full border-slate-400 px-4 mr-2"
-            ">SO type <span>!</span></button>
-            <button class="border rounded-full border-slate-400 px-4 mr-6"
-            ">Client legal enity<span>!</span></button>
-            <span>
-                        <span>+  </span>
-                            Add qiuck filter
-                        </span>
-        </div>
-        <div class="text-blue-400 border rounded-lg border-blue-400 bg-white px-2">
-            <span>!</span>
-            <button class="rounded-lg border-blue-400 px-4 mr-2 text-blue-400 py-1">Filter</button>
-        </div>
-    </div>
-</div>
-<main class="bg-[#F6F7F9] h-[82vh]">
-<div class="mx-auto mt-2 md:px-20 pb-3 text-xs">
-    <div class="pl-4 pr-44 flex justify-between">
-           <span class="flex">
-               <input class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mr-2 " id="default-checkbox" type="checkbox"
-                      value="">
-                <span>SO status</span>
-           </span>
-        <span>SO No / period</span>
-        <span>Legal entity Client / luxoft</span>
-        <span>Project / Project type</span>
-        <span>Contract / Status</span>
-        <span>Amount / with wat</span>
-    </div>
-</div>
-<div class="mx-auto md:px-20 pb-3 text-xs">
-    <div class="pl-4 flex justify-between bg-white py-5 flex flex-col shadow-lg rounded-l-md border-l-4 border-emerald-600">
-        <div class="flex justify-between">
-                    <span class="flex items-center">
-                        <input class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mr-2 "
-                               id="default-checkbox" type="checkbox"
-                               value="">
-                        <span class="bg-orange-500 text-white rounded rounded-tl-lg px-2 py-1">Postoned</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">SO-00000</span>
-                        <span class="text-xs">17-21 may 2021</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Lorem Ipsum</span>
-                        <span class="text-xs">dolor sit amet</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Lorem ipsum</span>
-                        <span class="text-xs">dolor sit amet</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="text-blue-100 bold">CC-000000000000</span>
-                        <span class="text-xs">Some status</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">00 000,00 USD</span>
-                        <span class="text-xs">00 000,00 USD</span>
-                    </span>
-            <div class="">
-                <span class="m-2">!</span>
-                <span class="m-2">!</span>
-                <span class="m-2">!</span>
             </div>
-        </div>
-        <div class="flex justify-between mx-2 text-sm p-3 mt-2 ml-5">
-                     <span class="flex flex-col">
-                        <span class="bold">Recognation balanse:</span>
-                        <span class="text-xs">0,00 USD</span>
+            <div class="flex text-slate-400 justify-between text-sm items-center">
+                <div>
+                    <button class="border rounded-full border-slate-400 px-4 mr-2">SO Status <span
+                            class="icon-angle-down"></span></button>
+                    <button class="border rounded-full border-slate-400 px-4 mr-2">SO type <span
+                            class="icon-angle-down "></span></button>
+                    <button class="border rounded-full border-slate-400 px-4 mr-6">Client legal enity<span
+                            class="icon-angle-down "></span></button>
+                    <span>
+                        <span>+ </span>
+                        Add qiuck filter
                     </span>
-            <span class="flex flex-col">
-                        <span class="bold">Unbilled balance:</span>
-                        <span class="text-xs">00 000,00 USD</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Unbilled balance:</span>
-                        <span class="text-xs">Lorem ipsum dolor sit amet, consectetur</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="text-blue-100 bold">Unbilled comment:</span>
-                        <span class="text-xs">Lorem ipsum dolor sit amet, consectetur</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Unbilled issue resolving data:</span>
-                        <span class="text-xs">Lorem ipsum dolor sit amet, consectetur</span>
-                    </span>
-        </div>
-    </div>
-</div>
-<div class="mx-auto md:px-20 pb-3 text-xs">
-    <div class="pl-4 flex justify-between bg-white py-5 flex flex-col shadow-lg rounded-l-md">
-        <div class="flex justify-between">
-                    <span class="flex items-center">
-                        <input class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mr-2 "
-                               id="default-checkbox" type="checkbox"
-                               value="">
-                        <span class="bg-orange-500 text-white rounded rounded-tl-lg px-2 py-1">Postoned</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">SO-00000</span>
-                        <span class="text-xs">17-21 may 2021</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Lorem Ipsum</span>
-                        <span class="text-xs">dolor sit amet</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Lorem ipsum</span>
-                        <span class="text-xs">dolor sit amet</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="text-blue-100 bold">CC-000000000000</span>
-                        <span class="text-xs">Some status</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">00 000,00 USD</span>
-                        <span class="text-xs">00 000,00 USD</span>
-                    </span>
-            <div class="">
-                <span class="m-2">!</span>
-                <span class="m-2">!</span>
-                <span class="m-2">!</span>
-            </div>
-        </div>
-        <div class="flex justify-between mx-2 text-sm p-3 mt-2 ml-5">
-                     <span class="flex flex-col">
-                        <span class="bold">Recognation balanse:</span>
-                        <span class="text-xs">0,00 USD</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Unbilled balance:</span>
-                        <span class="text-xs">00 000,00 USD</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Unbilled balance:</span>
-                        <span class="text-xs">Lorem ipsum dolor sit amet, consectetur</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="text-blue-100 bold">Unbilled comment:</span>
-                        <span class="text-xs">Lorem ipsum dolor sit amet, consectetur</span>
-                    </span>
-            <span class="flex flex-col">
-                        <span class="bold">Unbilled issue resolving data:</span>
-                        <span class="text-xs">Lorem ipsum dolor sit amet, consectetur</span>
-                    </span>
-        </div>
-    </div>
-</div>
-<div class="mx-auto md:px-20 pb-3 text-xs">
-    <div class="pl-4 flex justify-between bg-white py-5 flex flex-col shadow-lg rounded-l-md">
-        <div class="flex justify-between">
-            <span class="flex items-center">
-                <input class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mr-2 "
-                       id="default-checkbox" type="checkbox"
-                       value="">
-                <span class="bg-slate-500 text-white rounded rounded-tl-lg px-2 py-1">New</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="bold">SO-00000</span>
-                <span class="text-xs">17-21 may 2021</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="bold">Lorem Ipsum</span>
-                <span class="text-xs">dolor sit amet</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="bold">Lorem ipsum</span>
-                <span class="text-xs">dolor sit amet</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="text-blue-100 bold">CC-000000000000</span>
-                <span class="text-xs">Some status</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="bold">00 000,00 USD</span>
-                <span class="text-xs">00 000,00 USD</span>
-            </span>
-            <div class="">
-                <span class="m-2">!</span>
-                <span class="m-2">!</span>
-                <span class="m-2">!</span>
+                </div>
+                <div class="text-blue-400 border rounded-lg border-blue-400 bg-white px-2">
+                    <span class="icon-filter"></span>
+                    <button class="rounded-lg border-blue-400 px-4 mr-2 text-blue-400 py-1">Filter</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="mx-auto md:px-20 pb-3 text-xs">
-    <div class="pl-4 flex justify-between bg-white py-5 flex flex-col shadow-lg rounded-l-md">
-        <div class="flex justify-between">
-            <span class="flex items-center">
-                <input class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mr-2 "
-                       type="checkbox"
-                       value="">
-                <span class="bg-green-500 text-white rounded rounded-tl-lg px-2 py-1">Fixes</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="bold">SO-00000</span>
-                <span class="text-xs">17-21 may 2021</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="bold">Lorem Ipsum</span>
-                <span class="text-xs">dolor sit amet</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="bold">Lorem ipsum</span>
-                <span class="text-xs">dolor sit amet</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="text-blue-100 bold">CC-000000000000</span>
-                <span class="text-xs">Some status</span>
-            </span>
-            <span class="flex flex-col">
-                <span class="bold">00 000,00 USD</span>
-                <span class="text-xs">00 000,00 USD</span>
-            </span>
+    <div class="container max-w-[80%] m-auto">
+        <div class="grid grid-cols-9 container items-center text-xs p-2 m-auto">
+            <div class="flex ml-1">
+                <input type="checkbox" class="mr-1">
+                So Status
+            </div>
+            <div class="col-span-2">
+                SO No / Period
+            </div>
+            <div class="col-span-2">
+                Legal entity Client / luxoft
+            </div>
             <div class="">
-                <span class="m-2">!</span>
-                <span class="m-2">!</span>
-                <span class="m-2">!</span>
+                Project / Project type
+            </div>
+            <div class="">
+                Contact / Status
+            </div>
+            <div class="">
+                Amount / with vat
+            </div>
+        </div>
+        <div
+            class="grid grid-cols-9 container items-center text-xs lg:text-sm border mt-1 p-2 rounded border-l-4 border-l-orange-400 bg-white gap-x-[-20px] m-auto">
+            <div class="">
+                <input type="checkbox">
+                <span class="bg-orange-400 p-1 rounded-tl-md rounded-br-lg ">Postoned</span>
+            </div>
+            <div class="flex flex-col col-span-2">
+                <span class="font-bold ">SO-000000</span>
+                <span>17-21 may 2021</span>
+            </div>
+            <div class="flex flex-col col-span-2">
+                <span class="font-bold">Lorem ipsum</span>
+                <span>dolor sit amet</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold">Lorem ipsum</span>
+                <span>dolor sit amet</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold text-[#0F7AC7]">CC-000000000000</span>
+                <span>Some status</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold">00 000,00 USD</span>
+                <span>00 000,00 USD</span>
+            </div>
+            <div class="flex justify-around text-lg text-[#7E8CA3]">
+                <span class="icon-attach"></span>
+                <span class="icon-link"></span>
+                <span class="icon-ellipsis-vert"></span>
+            </div>
+            <div class="flex border col-span-9 bg-[#F6F7F9] mx-4 justify-between py-1 pr-1 md:pr-6 pl-1 rounded">
+                <div class="flex flex-col">
+                    <span class="text-xs">Recognition balanse:</span>
+                    <span>0,00 USD</span>
+                </div>
+                <div class="flex flex-col ">
+                    <span class="text-xs">Unbilled balanse:</span>
+                    <span>00 000,00 USD</span>
+                </div>
+                <div class="flex flex-col ">
+                    <span class="text-xs">Unbilled reason:</span>
+                    <span>Lorem ipsum dolor sit amet, consectetur</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xs">Unbilled comment:</span>
+                    <span>Lorem ipsum dolor sit amet, consectetur</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xs">Unbilled issue resolving date</span>
+                    <span>Lorem ipsum dolor sit amet, consectetur</span>
+                </div>
+            </div>
+        </div>
+        <div
+            class="grid grid-cols-9 container  m-auto gap-2 items-center text-sm border mt-3 p-2 rounded border-l-4 bg-white">
+            <div class="">
+                <input type="checkbox">
+                <span class="bg-slate-400 p-1 rounded-tl-md rounded-br-lg text-white">New</span>
+            </div>
+            <div class="flex flex-col col-span-2">
+                <span class="font-bold">SO-000000</span>
+                <span>17-21 may 2021</span>
+            </div>
+            <div class="flex flex-col col-span-2">
+                <span class="font-bold">Lorem ipsum</span>
+                <span>dolor sit amet</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold">Lorem ipsum</span>
+                <span>dolor sit amet</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold text-[#0F7AC7]">CC-000000000000</span>
+                <span>Some status</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold">00 000,00 USD</span>
+                <span>00 000,00 USD</span>
+            </div>
+            <div class="flex justify-around text-lg text-[#7E8CA3]">
+                <span class="icon-attach"></span>
+                <span class="icon-link"></span>
+                <span class="icon-ellipsis-vert"></span>
+            </div>
+        </div>
+        <div
+            class="grid grid-cols-9 container  m-auto gap-2 items-center text-sm border mt-3 p-2 rounded border-l-4 border-l-green-400 bg-white">
+            <div class="">
+                <input type="checkbox">
+                <span class="bg-green-400 p-1 rounded-tl-md rounded-br-lg text-white">Fixed</span>
+            </div>
+            <div class="flex flex-col col-span-2">
+                <span class="font-bold">SO-000000</span>
+                <span>17-21 may 2021</span>
+            </div>
+            <div class="flex flex-col col-span-2">
+                <span class="font-bold">Lorem ipsum</span>
+                <span>dolor sit amet</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold">Lorem ipsum</span>
+                <span>dolor sit amet</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold text-[#0F7AC7]">CC-000000000000</span>
+                <span>Some status</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold">00 000,00 USD</span>
+                <span>00 000,00 USD</span>
+            </div>
+            <div class="flex justify-around text-lg text-[#7E8CA3]">
+                <span class="icon-attach"></span>
+                <span class="icon-link"></span>
+                <span class="icon-ellipsis-vert"></span>
             </div>
         </div>
     </div>
-</div>
-</main>
-<footer>
-    <div class="justify-left space-x-4 text-sm font-semibold text-slate-700">
-        <span>Total SO: <b>7</b></span>
-        <span>Total amount: <b>USD</b></span>
-</footer>
+    <footer>
+        <div class="absolute bg-white inset-x-0 bottom-0 h-12 m-auto">
+            <div class="absolute bg-white inset-x-0 bottom-0 h-12 m-auto container max-w-[80%] flex items-center">
+                <span>Total SO: <span class="font-bold mr-4">7</span></span>
+                <span>Total amount: <span class="font-bold">266 000,00USD</span></span>
+            </div>
+        </div>
+    </footer>
 </body>
-</html>
 
+</html>
